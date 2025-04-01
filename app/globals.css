@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 50 50% 3%;
+    --foreground: 60 11% 90%;
+
+    --muted: 60 7% 14%;
+    --muted-foreground: 60 5% 64%;
+
+    --accent: 60 7% 24%;
+    --accent-foreground: 60 11% 90%;
+
+    --success: 70 50% 44%;
+    --warning: 40 92% 58%;
+    --danger: 0 73% 59%;
+    --info: 180 36% 56%;
+
+    --border: 60 7% 28%;
+    --input: 60 7% 24%;
+    --ring: 60 7% 28%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar for terminal look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #504945;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #665c54;
+}
+
