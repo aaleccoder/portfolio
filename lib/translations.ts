@@ -18,6 +18,28 @@ Available commands:
     projectsTitle: "Projects",
     repository: "Repository",
     liveDemo: "Live Demo",
+    projects: [
+      {
+        title: "E-commerce Platform",
+        description:
+          "A full-stack e-commerce platform built with Next.js, TypeScript, and Stripe integration.",
+        repo: "https://github.com/username/ecommerce",
+        demo: "https://ecommerce-demo.vercel.app",
+      },
+      {
+        title: "Task Management App",
+        description:
+          "A React-based task management application with drag-and-drop functionality and local storage.",
+        repo: "https://github.com/username/task-manager",
+        demo: "https://task-manager-demo.vercel.app",
+      },
+      {
+        title: "Weather Dashboard",
+        description: "A weather dashboard that fetches and displays weather data from multiple APIs.",
+        repo: "https://github.com/username/weather-app",
+        demo: "https://weather-app-demo.vercel.app",
+      },
+    ],
     skillsTitle: "Skills",
     frontend: "Frontend",
     backend: "Backend",
@@ -52,6 +74,28 @@ Comandos disponibles:
     projectsTitle: "Proyectos",
     repository: "Repositorio",
     liveDemo: "Demo en vivo",
+    projects: [
+      {
+        title: "Plataforma de Comercio Electrónico",
+        description:
+          "Una plataforma completa de comercio electrónico construida con Next.js, TypeScript e integración de Stripe.",
+        repo: "https://github.com/username/ecommerce",
+        demo: "https://ecommerce-demo.vercel.app",
+      },
+      {
+        title: "Aplicación de Gestión de Tareas",
+        description:
+          "Una aplicación de gestión de tareas basada en React con funcionalidad de arrastrar y soltar y almacenamiento local.",
+        repo: "https://github.com/username/task-manager",
+        demo: "https://task-manager-demo.vercel.app",
+      },
+      {
+        title: "Panel del Tiempo",
+        description: "Un panel del tiempo que obtiene y muestra datos meteorológicos de múltiples APIs.",
+        repo: "https://github.com/username/weather-app",
+        demo: "https://weather-app-demo.vercel.app",
+      },
+    ],
     skillsTitle: "Habilidades",
     frontend: "Frontend",
     backend: "Backend",

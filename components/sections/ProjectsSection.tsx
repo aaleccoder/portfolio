@@ -12,29 +12,6 @@ type ProjectsProps = {
 }
 
 export function ProjectsSection({ theme, t }: ProjectsProps) {
-  const projects = [
-    {
-      title: "E-commerce Platform",
-      description:
-        "A full-stack e-commerce platform built with Next.js, TypeScript, and Stripe integration.",
-      repo: "https://github.com/username/ecommerce",
-      demo: "https://ecommerce-demo.vercel.app",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "A React-based task management application with drag-and-drop functionality and local storage.",
-      repo: "https://github.com/username/task-manager",
-      demo: "https://task-manager-demo.vercel.app",
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A weather dashboard that fetches and displays weather data from multiple APIs.",
-      repo: "https://github.com/username/weather-app",
-      demo: "https://weather-app-demo.vercel.app",
-    },
-  ]
-
   return (
     <div className="mt-6 p-4 rounded-lg border" style={{ backgroundColor: theme.bg, borderColor: theme.border }}>
       <div className="flex items-center gap-2 mb-4" style={{ color: theme.accent2 }}>
@@ -43,7 +20,7 @@ export function ProjectsSection({ theme, t }: ProjectsProps) {
       </div>
 
       <div className="grid gap-4">
-        {projects.map((project, index) => (
+        {t.projects.map((project, index) => (
           <div 
             key={index} 
             className="p-3 rounded border" 
