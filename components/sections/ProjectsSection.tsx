@@ -13,22 +13,22 @@ type ProjectsProps = {
 
 export function ProjectsSection({ theme, t }: ProjectsProps) {
   return (
-    <div className="mt-6 p-4 rounded-lg border" style={{ backgroundColor: theme.bg, borderColor: theme.border }}>
-      <div className="flex items-center gap-2 mb-4" style={{ color: theme.accent2 }}>
-        <Code size={18} />
-        <h2 className="text-lg font-bold">{t.projectsTitle}</h2>
+    <div className="mt-4 md:mt-6 p-3 md:p-4 rounded-lg border" style={{ backgroundColor: theme.bg, borderColor: theme.border }}>
+      <div className="flex items-center gap-2 mb-3 md:mb-4" style={{ color: theme.accent2 }}>
+        <Code size={16} className="md:size-18" />
+        <h2 className="text-base md:text-lg font-bold">{t.projectsTitle}</h2>
       </div>
 
-      <div className="grid gap-4">
+      <div className="grid gap-3 md:gap-4">
         {t.projects.map((project, index) => (
           <div 
             key={index} 
-            className="p-3 rounded border" 
+            className="p-2 md:p-3 rounded border" 
             style={{ backgroundColor: theme.bgLighter, borderColor: theme.border }}
           >
             <h3 className="font-bold mb-1" style={{ color: theme.accent }}>{project.title}</h3>
-            <p className="text-sm mb-2">{project.description}</p>
-            <div className="flex gap-4 text-sm">
+            <p className="text-xs md:text-sm mb-2">{project.description}</p>
+            <div className="flex flex-wrap gap-2 md:gap-4 text-xs md:text-sm">
               <a
                 href={project.repo}
                 target="_blank"
@@ -36,7 +36,7 @@ export function ProjectsSection({ theme, t }: ProjectsProps) {
                 className="flex items-center gap-1 hover:underline"
                 style={{ color: theme.link }}
               >
-                <Github size={14} />
+                <Github size={12} className="md:size-14" />
                 {t.repository}
               </a>
               <a
@@ -46,7 +46,7 @@ export function ProjectsSection({ theme, t }: ProjectsProps) {
                 className="flex items-center gap-1 hover:underline"
                 style={{ color: theme.link }}
               >
-                <ExternalLink size={14} />
+                <ExternalLink size={12} className="md:size-14" />
                 {t.liveDemo}
               </a>
             </div>

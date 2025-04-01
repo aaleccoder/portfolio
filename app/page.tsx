@@ -150,7 +150,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: theme.bg, color: theme.text }}>
-      <div className="font-mono p-4 md:p-8">
+      <div className="font-mono p-2 md:p-8 max-w-full">
         {/* Terminal Header */}
         <TerminalHeader 
           activeSection={activeSection}

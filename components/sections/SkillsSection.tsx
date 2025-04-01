@@ -12,7 +12,6 @@ type SkillsSectionProps = {
 }
 
 export function SkillsSection({ theme, t }: SkillsSectionProps) {
-  // Define skill categories
   const categories = [
     { key: 'frontend', title: t.frontend },
     { key: 'backend', title: t.backend },
@@ -21,23 +20,23 @@ export function SkillsSection({ theme, t }: SkillsSectionProps) {
   ] as const;
 
   return (
-    <div className="mt-6 p-4 rounded-lg border" 
+    <div className="mt-4 md:mt-6 p-3 md:p-4 rounded-lg border" 
       style={{ backgroundColor: theme.bg, borderColor: theme.border }}
     >
-      <div className="flex items-center gap-2 mb-4" style={{ color: theme.accent2 }}>
-        <BookOpen size={18} />
-        <h2 className="text-lg font-bold">{t.skillsTitle}</h2>
+      <div className="flex items-center gap-2 mb-3 md:mb-4" style={{ color: theme.accent2 }}>
+        <BookOpen size={16} className="md:size-18" />
+        <h2 className="text-base md:text-lg font-bold">{t.skillsTitle}</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
         {categories.map((category) => (
           <div 
             key={category.key}
-            className="p-3 rounded border" 
+            className="p-2 md:p-3 rounded border" 
             style={{ backgroundColor: theme.bgLighter, borderColor: theme.border }}
           >
-            <h3 className="font-bold mb-2" style={{ color: theme.accent }}>{category.title}</h3>
-            <ul className="list-disc list-inside space-y-1">
+            <h3 className="font-bold mb-1 md:mb-2" style={{ color: theme.accent }}>{category.title}</h3>
+            <ul className="list-disc list-inside space-y-0.5 md:space-y-1 text-xs md:text-sm">
               {t.skills[category.key].map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}

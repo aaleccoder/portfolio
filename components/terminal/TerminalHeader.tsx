@@ -33,22 +33,24 @@ export function TerminalHeader({
       className="flex items-center justify-between" 
       style={{ backgroundColor: theme.bgLighter, borderBottom: `1px solid ${theme.border}` }}
     >
-      <div className="flex items-center gap-2 p-2 rounded-t-lg">
-        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#fb4934" }}></div>
-        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#fabd2f" }}></div>
-        <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "#b8bb26" }}></div>
-        <span className="ml-2 text-sm">terminal@portfolio ~ {activeSection}</span>
+      <div className="flex items-center gap-1 md:gap-2 p-2 rounded-t-lg">
+        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full" style={{ backgroundColor: "#fb4934" }}></div>
+        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full" style={{ backgroundColor: "#fabd2f" }}></div>
+        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full" style={{ backgroundColor: "#b8bb26" }}></div>
+        <span className="ml-1 md:ml-2 text-xs md:text-sm truncate max-w-[120px] md:max-w-none">
+          terminal@portfolio ~ {activeSection}
+        </span>
       </div>
       
-      <div className="flex items-center gap-2 p-2">
+      <div className="flex items-center gap-1 md:gap-2 p-1 md:p-2">
         {/* Language Selector */}
         <DropdownMenu>
           <DropdownMenuTrigger 
             className="flex items-center gap-1 p-1 rounded hover:bg-opacity-20" 
             style={{ backgroundColor: `${theme.bgLighter}`, color: theme.link }}
           >
-            <Globe size={16} />
-            <span className="text-xs">{language.toUpperCase()}</span>
+            <Globe size={14} className="md:size-16" />
+            <span className="text-xs hidden xs:inline">{language.toUpperCase()}</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem onClick={() => setLanguage("en")}>
@@ -66,8 +68,8 @@ export function TerminalHeader({
             className="flex items-center gap-1 p-1 rounded hover:bg-opacity-20" 
             style={{ backgroundColor: `${theme.bgLighter}`, color: theme.link }}
           >
-            <PaintBucket size={16} />
-            <span className="text-xs">{theme.name}</span>
+            <PaintBucket size={14} className="md:size-16" />
+            <span className="text-xs hidden xs:inline">{theme.name}</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             {Object.entries(THEMES).map(([key, themeValue]) => (
