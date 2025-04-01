@@ -15,6 +15,17 @@ export default function Portfolio() {
 
   // Terminal welcome text
   const welcomeText = `Welcome to my terminal portfolio! Type 'help' to see available commands.`
+  
+  // Help command response
+  const helpResponse = `
+Available commands:
+- help: Show this help message
+- about: Show information about me
+- projects: View my projects
+- skills: View my technical skills
+- contact: View contact information
+- clear: Clear the terminal
+`
 
   // Type the welcome text on load
   useEffect(() => {
@@ -24,7 +35,8 @@ export default function Portfolio() {
       i++
       if (i > welcomeText.length) {
         clearInterval(typing)
-        setCommandHistory([welcomeText])
+        // Show welcome message and automatically execute help command
+        setCommandHistory([welcomeText, "$ help", helpResponse])
       }
     }, 50)
 
@@ -49,15 +61,7 @@ export default function Portfolio() {
 
     // Process commands
     if (command === "help") {
-      response = `
-Available commands:
-- help: Show this help message
-- about: Show information about me
-- projects: View my projects
-- skills: View my technical skills
-- contact: View contact information
-- clear: Clear the terminal
-`
+      response = helpResponse
     } else if (command === "about") {
       setActiveSection("about")
       response = "Loading about section..."
