@@ -31,10 +31,6 @@ export function CommandInput({
         style={{ backgroundColor: "transparent", color: theme.text }}
         autoFocus
       />
-      <span 
-        className={cn("ml-0.5 w-2 h-5", showCursor ? "opacity-100" : "opacity-0")}
-        style={{ backgroundColor: theme.text }}
-      ></span>
     </form>
   )
 }
