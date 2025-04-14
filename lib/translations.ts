@@ -26,6 +26,13 @@ export const TRANSLATIONS = {
           repo: "https://github.com/aaleccoder/portfolio",
           demo: "https://ecommerce-demo.vercel.app",
         },
+        {
+          title: "CHATLLM",
+          description:
+            "A frontend for different models like Gemini",
+          repo: "https://github.com/aaleccoder/androidLLM",
+          demo: "",
+        }
       ],
       skillsTitle: "Skills",
       frontend: "Frontend",
@@ -87,7 +94,20 @@ export const TRANSLATIONS = {
       repository: "Repositorio",
       liveDemo: "Demo en vivo",
       projects: [
-        
+        {
+          title: "This portfolio",
+          description:
+            "Una experiencia tipo terminal para un portafolio",
+          repo: "https://github.com/aaleccoder/portfolio",
+          demo: "https://ecommerce-demo.vercel.app",
+        },
+        {
+          title: "CHATLLM",
+          description:
+            "Un frontend para diferentes modelos como Gemini",
+          repo: "https://github.com/aaleccoder/androidLLM",
+          demo: "",
+        }
       ],
       skillsTitle: "Habilidades",
       frontend: "Frontend",

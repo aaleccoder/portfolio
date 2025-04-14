@@ -38,7 +38,7 @@ export default function Portfolio() {
     if (inputRef.current) {
       inputRef.current.focus()
     }
-  }, [language, welcomeText, helpResponse])
+  }, [language, welcomeText, helpResponse, t]) // Added t as dependency
 
   // Always focus input when clicking anywhere in the terminal
   useEffect(() => {
